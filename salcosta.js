@@ -191,7 +191,28 @@ function galleryPrevious() {
     
 }
 
-// Next & previous via arrow keys
+// Modal next & previous via swipe
+
+let touchstartX = 0
+let touchendX = 0
+
+function checkSwipeDir() {
+    if (document.getElementById("modal00").className == "visible") { // Check if modal opened
+        if (touchendX < touchstartX) galleryPrevious();
+        if (touchendX > touchstartX) galleryNext();
+    }
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkSwipeDir()
+})
+
+// Modal next & previous via arrow keys
 
 document.addEventListener('keydown', function(event) {
     if (document.getElementById("modal00").className == "visible") { // Check if modal opened
