@@ -87,12 +87,14 @@ html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100%;
-	margin-right: calc(-1 * (100vw - 100%)); /* Keeps scrollbar from shifting content */
+	/* margin-right: calc(-1 * (100vw - 100%)); /* Keeps scrollbar from shifting content */
 }
 body {
 	margin: 0 auto;
-	height: 100%;
+	padding: 0;
 	width: 90%;
+	max-width: 100%;
+	overflow-x: hidden;
 	text-align: left;
 }
 *:focus { /* Universal for focus */
@@ -485,6 +487,7 @@ label.theme-switch:hover {
 }
 #nav-button { /* Touch Nav button */
 	padding: 4px 10px 8px 10px;
+	font-weight: bold;
 	position: fixed;
 	top: 1em;
 	right: 2em;
@@ -493,11 +496,11 @@ label.theme-switch:hover {
 }
 a.button.closebtn { /* Touch Nav X button */
 	margin: 16px;
-	width: 8px;
-	height: 32px;
+	width: 6px;
+	height: 30px;
 	position: fixed;
 	top: 1em;
-	right: 2em;
+	right: 1em;
 	display: none;
 	box-shadow: none;
 }
@@ -505,8 +508,8 @@ a.button.closebtn .times { /* button 'X' */
 	font-size: 32pt;
 	display: inline-block;
 	position: relative;
-	left: -9px;
-	top: -9px;
+	left: -10px;
+	top: -10px;
 }
 a.button.closebtn:hover .times, 
 a.button.closebtn:focus .times {
@@ -732,7 +735,7 @@ h1.page-title { /* Page title banner text */
  @media screen and (max-width: 1400px) { /* Smaller Screen banner */
 	#page-banner img {
 		top: 60%;
-		min-width: 500px;
+		min-width: 400px;
 	}
 } 
 @media screen and (max-width: 1200px) { /* Tablet page banner */
@@ -743,7 +746,7 @@ h1.page-title { /* Page title banner text */
 		padding: 1em;
 	}
 }
-@media screen and (max-width: 800px) { /* Mobile page banner */
+@media screen and (max-width: 600px) { /* Mobile page banner */
 	h1.page-title {
 		padding-left: 10px;
 	}
@@ -751,6 +754,7 @@ h1.page-title { /* Page title banner text */
 		width: 100%;
 		top: 65%;
 		min-width: 100px;
+		right: 0;
 		left: 0;
 	}
 	#page-container {
