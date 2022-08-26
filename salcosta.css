@@ -1056,9 +1056,15 @@ span.selector-dot.right {
 		border-radius: 16px;
 	}
 }
-@media screen and (max-width: 800px) { /* Mobile Screen */
+@media screen and (max-width: 600px) { /* Mobile Screen */
 	.photo-gallery {
 		margin-top: 2em;
+	}
+	a.gallery-tab {
+		font-size: 18pt;
+		padding: 16px 8px 0 8px;
+		width: 40%;
+		margin: 0.8em 0;
 	}
 }
 
