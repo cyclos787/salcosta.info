@@ -80,6 +80,7 @@ Screen Responsive sizes:
 
 html {
 	margin: 0 auto;
+	padding: 0;
 	font-family: 'Trebuchet MS'; /* Default if Gill Sans MT doesn't work */
 	background-color: #fffbee; /* Fallback */
 	background-color: var(--active-base);
@@ -92,9 +93,7 @@ html {
 body {
 	margin: 0 auto;
 	padding: 0;
-	width: 90%;
-	max-width: 100%;
-	overflow-x: hidden;
+	max-width: 90%;
 	text-align: left;
 }
 *:focus { /* Universal for focus */
