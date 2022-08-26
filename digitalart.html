@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    
+    <!-- ------------- -->
+    <!--   Site Head   -->
+    <!-- ------------- -->
+
+    <head>
+        <!-- Meta tags -->
+		<meta charset="utf-8">
+		<title>Sal Costa - Digital Art</title>
+        <meta name="description" content="Sal Costa's Digital Art Portfolio">
+        <meta name="keywords" content="Sal, Costa, Salvatore, Detroit, Michigan, United States, design, designer, web, website, art, artist, creator, creative, digital, 
+                    graphic, video, game, games, UX, UI, photography, photo, film, 35mm, music, sound, audio, production, producer, freelance, portfolio, resume">
+        <meta name="author" content="Sal Costa">
+        <meta name="viewport" content="width=device-width, initialscale=1"> 
+        <link rel="stylesheet" type="text/css" href="salcosta.css">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+        <link rel="shortcut_icon" href="favicon.ico">
+    </head>
+
+    <!-- ------------- -->
+    <!--   Site Body   -->
+    <!-- ------------- -->
+
+    <body>
+
+        <a id="top"></a>
+        
+        <!-- Header -->
+        <header>
+            <div id="header">
+                
+                <div class="header-container left">
+                    <a href="index.html">
+                        <h1 id="name">Sal<span class="lastname">Costa</span></h1>
+                    </a>
+
+                    <div id="light-switch" title="Change the theme" alt="Switch between light and dark mode." tabindex="0" onkeydown="switchThemeEnter(event)">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox"/>
+                            <span class="light-symbols">&#9728;<br>&#9687;</span> <!-- Sun & Moon Symbols -->
+                            <div class="switch-target"></div>
+                        </label>
+                    </div>  
+                </div>
+
+                <!-- Responsive nav button -->
+                <a href="javascript:void(0);" class="button" id="nav-button" onclick="navOpen()" title="Open Navigation" alt="Open website navigation">
+                    <span>&#9776;</span>
+                    <div class="button-target"></div>
+                </a>
+
+                <div id="header-nav" class="header-container right">
+
+                    <!-- Responsive nav X button -->
+                    <a href="javascript:void(0);" class="button closebtn navclose" onclick="navClose()" title="Close Navigation" alt="Close website navigation">
+                        <span class="times">&times;</span>
+                        <div class="button-target"></div>
+                    </a>
+
+                    <div id="nav"> <!-- Navigation Bar -->
+                        <ul>
+                            <li>
+                                <a href="resume.html" title="Resume">Resume<br>Resume</a>
+                            </li>
+                            <li>
+                                <a href="music.html" title="Music">Music<br>Music</a>
+                            </li>
+                            <li>
+                                <a href="photography.html" title="Photography">Photos<br>Photos</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="active" title="Digital Art">Digital<br>Digital</a>
+                            </li>
+                            <li>
+                                <a href="gamedesign.html" title="Game Design">Games<br>Games</a>
+                            </li>	
+                        </ul>
+                    </div>
+                    
+                    <div id="social">
+                        <div class="social-icon email">
+                            <a href="mailto:salcosta@protonmail.com">
+                                <img src="assets/icon_email.svg" alt="salcosta@protonmail.com" title="salcosta@protonmail.com" />
+                            </a>
+                        </div>
+                        <div class="social-icon linkedin">
+                            <a href="https://www.linkedin.com/in/salccosta/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <img src="assets/icon_linkedin.svg" alt="Sal Costa on LinkedIn" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div> <!-- /container right -->
+
+            </div> <!-- /header -->
+            
+        </header>
+        
+        <!-- Page Content (Digital Art)-->
+
+        <div id="page-banner">
+            <h1 class="page-title">Digital Art</h1>
+            <img src="assets/banner_digital.svg" />
+        </div>
+
+        <div id="page-container" class="digitalart">
+
+            <h2 class="category">Graphic Design</h2>
+            <div class="dotted-line">
+                <span class="dots center">
+                    <span class="dots-content"></span><span class="dots-content"></span>
+                </span>
+            </div>
+
+            <h3 class="portfolio">Mock Bakery Logo and Style Guide</h3>
+            <a href="portfolio/digitalart/salvatore-costa-digital-art-mock-bakery-brand-identity-guide.pdf" class="button" title="Open Style Guide as PDF" alt="Open Style Guide as PDF" target="_blank">Bakery Style Guide PDF</a>
+            <div class="sub-container img-split">
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page1.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page2.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page3.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page4.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page5.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page6.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page7.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-bakery-brand-identity-guide_page8.png" />
+            </div>
+            <span class="footer-dots"></span>
+            <br><br>
+
+            <h3 class="portfolio">Custom Round Adobe CS6 Icons</h3>
+            <div class="sub-container img-split">
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-adobe-illustrator-cs6-round-icon.png" class="small-size"/>
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-adobe-indesign-cs6-round-icon.png" class="small-size"/>
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-adobe-photoshop-cs6-round-icon.png" class="small-size"/>
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-adobe-audition-cs6-round-icon.png" class="small-size"/>
+
+            </div>
+            <span class="footer-dots"></span>
+            <br><br>
+
+            <h3 class="portfolio">Typography Study</h3>
+            <div class="sub-container img-split">
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-typography-study-sabon-1.png" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-typography-study-sabon-2.png" />
+            </div>
+            <span class="footer-dots"></span>
+            <br><br>
+
+            <h2 class="category">Photo Manipulation</h2>
+            <div class="dotted-line">
+                <span class="dots center">
+                    <span class="dots-content"></span><span class="dots-content"></span>
+                </span>
+            </div>
+
+            <h3 class="portfolio">Album covers</h3>
+            <div class="sub-container img-split">
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-album.jpg" />
+                <img src="portfolio/digitalart/salvatore-costa-digital-art-album-neon.jpg" />
+            </div>
+
+        </div> <!-- /page container -->
+
+        <footer>
+            <div id="footer">
+                <span class="footer-dots"></span>
+                <span class="copyright">&copy; 2022 Sal Costa</span>
+            </div>
+        </footer>
+
+         <!-- Back to top button -->
+            <a href="#top" id="top-button" class="button hidden" title="Back to Top" alt="Scroll to top of page."><b>&#8593;</b></a>
+        
+        <script defer src="salcosta.js"></script>
+        <script defer src="jquery-3.6.0.min.js"></script>
+
+    </body>
+
+</html>

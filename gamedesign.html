@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+    
+    <!-- ------------- -->
+    <!--   Site Head   -->
+    <!-- ------------- -->
+
+    <head>
+        <!-- Meta tags -->
+		<meta charset="utf-8">
+		<title>Sal Costa - Game Design</title>
+        <meta name="description" content="Sal Costa's Game Design Portfolio">
+        <meta name="keywords" content="Sal, Costa, Salvatore, Detroit, Michigan, United States, design, designer, web, website, art, artist, creator, creative, digital, 
+                    graphic, video, game, games, UX, UI, photography, photo, film, 35mm, music, sound, audio, production, producer, freelance, portfolio, resume">
+        <meta name="author" content="Sal Costa">
+        <meta name="viewport" content="width=device-width, initialscale=1"> 
+        <link rel="stylesheet" type="text/css" href="salcosta.css">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+        <link rel="shortcut_icon" href="favicon.ico">
+    </head>
+
+    <!-- ------------- -->
+    <!--   Site Body   -->
+    <!-- ------------- -->
+
+    <body>
+
+        <a id="top"></a>
+        
+        <!-- Header -->
+        <header>
+            <div id="header">
+                
+                <div class="header-container left">
+                    <a href="index.html">
+                        <h1 id="name">Sal<span class="lastname">Costa</span></h1>
+                    </a>
+
+                    <div id="light-switch" title="Change the theme" alt="Switch between light and dark mode." tabindex="0" onkeydown="switchThemeEnter(event)">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox"/>
+                            <span class="light-symbols">&#9728;<br>&#9687;</span> <!-- Sun & Moon Symbols -->
+                            <div class="switch-target"></div>
+                        </label>
+                    </div>  
+                </div>
+
+                <!-- Responsive nav button -->
+                <a href="javascript:void(0);" class="button" id="nav-button" onclick="navOpen()" title="Open Navigation" alt="Open website navigation">
+                    <span>&#9776;</span>
+                    <div class="button-target"></div>
+                </a>
+
+                <div id="header-nav" class="header-container right">
+
+                    <!-- Responsive nav X button -->
+                    <a href="javascript:void(0);" class="button closebtn navclose" onclick="navClose()" title="Close Navigation" alt="Close website navigation">
+                        <span class="times">&times;</span>
+                        <div class="button-target"></div>
+                    </a>
+
+                    <div id="nav"> <!-- Navigation Bar -->
+                        <ul>
+                            <li>
+                                <a href="resume.html" title="Resume">Resume<br>Resume</a>
+                            </li>
+                            <li>
+                                <a href="music.html" title="Music">Music<br>Music</a>
+                            </li>
+                            <li>
+                                <a href="photography.html" title="Photography">Photos<br>Photos</a>
+                            </li>
+                            <li>
+                                <a href="digitalart.html" title="Digital Art">Digital<br>Digital</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="active" title="Game Design">Games<br>Games</a>
+                            </li>	
+                        </ul>
+                    </div>
+                    
+                    <div id="social">
+                        <div class="social-icon email">
+                            <a href="mailto:salcosta@protonmail.com">
+                                <img src="assets/icon_email.svg" alt="salcosta@protonmail.com" title="salcosta@protonmail.com" />
+                            </a>
+                        </div>
+                        <div class="social-icon linkedin">
+                            <a href="https://www.linkedin.com/in/salccosta/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <img src="assets/icon_linkedin.svg" alt="Sal Costa on LinkedIn" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div> <!-- /container right -->
+
+            </div> <!-- /header -->
+            
+        </header>
+        
+        <!-- Page Content (Digital Art)-->
+
+        <div id="page-banner">
+            <h1 class="page-title">Game Design</h1>
+            <img src="assets/banner_games.svg" />
+        </div>
+
+        <div id="page-container" class="gamedesign">
+
+            <h2 class="category">Top<strong>&ndash;</strong>Down Dungeon Crawler</h2>
+            <div class="dotted-line">
+                <span class="dots center">
+                    <span class="dots-content"></span><span class="dots-content"></span>
+                </span>
+            </div>
+
+            <iframe class="youtube" src="https://www.youtube-nocookie.com/embed/ow6HjMT363A" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3 class="portfolio">Game Description</h3>
+            <p><tab1>A top-down style dungeon crawler with a dark ambience. The player is to escape the dungeon by collecting keys 
+                and defeating the boss, finding weapon upgrades and fighting enemies around the level. The map contains traps 
+                and several triggers to advance or alter the level. I worked on this game in a team of 4 students with 6 weeks 
+                to build the game.</p>
+
+            <div class="sub-container img-split">
+                <img src="portfolio/gamedesign/sal-costa-game-design-dungeon-crawler-level.png" class="small-size"/>
+                <p>Overview of level map</p>
+            </div>
+
+            <h3 class="portfolio">Features</h3>
+            <span class="resume-content">
+                <ul>
+                    <li>2 types of minion enemies and a boss enemy, with full combat system and different weapons</li>
+                    <li>Original sound effects and music (found on Music page)</li>
+                    <li>Interactive locking doors and switches to advance through game</li>
+                    <li>Detailed level with occlusion effect making the player always visible through materials</li>
+                </ul>
+            </span>
+
+            <div class="sub-container img-split">
+                <img src="portfolio/gamedesign/sal-costa-game-design-dungeon-crawler-torch.png" class="small-size"/>
+                <img src="portfolio/gamedesign/sal-costa-game-design-dungeon-crawler-rubble.png" class="small-size"/>
+                <p>Models for wall torch (left) and rubble pile (right)</p>
+            </div>
+
+            <h3 class="portfolio">My Roles</h3>
+            <span class="resume-content">
+                <ul>
+                    <li>Composed original music and created sound effects</li>
+                    <li>Programmed combat system; dealing and taking of damage with variables based on the types of weapon and enemy</li>
+                    <li>Created menu screens and HUD layout, as well as UI graphics</li>
+                    <li>Created models in Autodesk Maya for level props</li>
+                    <li>Worked on traceability matrix and helped manage project direction</li>
+                </ul>
+            </span>
+
+            <h3 class="portfolio">Takeaways</h3>
+            <span class="resume-content">
+                <ul>
+                    <li>Gained experience working in a team setting with a limited timeline</li>
+                    <li>Experienced the amount of interactions that can occur when multiple people are working with different coding styles/approaches</li>
+                    <li>Enjoyed working in a team setting, communication was most important for the team's success</li>
+                </ul>
+            </span>
+
+            <div class="sub-container img-single">
+                <img src="portfolio/gamedesign/sal-costa-game-design-dungeon-crawler-boss.png" />
+                <p>Game HUD and boss room</p>
+            </div>
+            
+            <span class="footer-dots"></span>
+            <br><br>
+
+            <h2 class="category">First<strong>&ndash;</strong>Person Treasure Hunter</h2>
+            <div class="dotted-line">
+                <span class="dots center">
+                    <span class="dots-content"></span><span class="dots-content"></span>
+                </span>
+            </div>
+
+            <iframe class="youtube" src="https://www.youtube-nocookie.com/embed/ouCr44U3Lhk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3 class="portfolio">Game Description</h3>
+            <p><tab1>This game gives the player the task of collecting all 10 gemstones before time runs out. 
+                The player can “dig” the terrain to look beneath the surface for items, walking close to buried 
+                treasure gives the player a visual and audio cue to indicate where buried treasure lies.</p>
+
+            <div class="sub-container img-single">
+                <img src="portfolio/gamedesign/sal-costa-game-design-treasure-hunter-items.png" />
+                <p>View of items spawned beneath level surface</p>
+            </div>
+
+            <h3 class="portfolio">Features</h3>
+            <span class="resume-content">
+                <ul>
+                    <li>Procedural terrain that can be lowered or raised by the player, with a specified dig radius</li>
+                    <li>Item detection when player is near/above treasure</li>
+                    <li>Randomly spawned items and time bonuses within diggable terrain area</li>
+                </ul>
+            </span>
+
+            <h3 class="portfolio">Takeaways</h3>
+            <span class="resume-content">
+                <ul>
+                    <li>Learned the fundamentals of having the player interact with different elements of the game world</li>
+                    <li>Learned the amount of troubleshooting involved in game development, as this was my first Unreal project</li>
+                    <li>Gained experience working with tick based and time based events</li>
+                </ul>
+            </span>
+
+            <div class="sub-container img-single">
+                <img src="portfolio/gamedesign/sal-costa-game-design-treasure-hunter-level.png" />
+                <p>Level overview</p>
+            </div>
+            
+
+        </div> <!-- /page container -->
+
+        <footer>
+            <div id="footer">
+                <span class="footer-dots"></span>
+                <span class="copyright">&copy; 2022 Sal Costa</span>
+            </div>
+        </footer>
+
+         <!-- Back to top button -->
+            <a href="#top" id="top-button" class="button hidden" title="Back to Top" alt="Scroll to top of page."><b>&#8593;</b></a>
+        
+        <script defer src="salcosta.js"></script>
+        <script defer src="jquery-3.6.0.min.js"></script>
+
+    </body>
+
+</html>
