@@ -162,7 +162,7 @@ h3.portfolio {
 p {
 	margin: 0 auto;
 	width: 70%;
-	min-width: 420px;
+	min-width: 400px;
 	font-family: 'Gill Sans MT';
 	font-size: 16pt;
 	color: #1d1d1d; /* Fallback */
@@ -267,6 +267,9 @@ a.button:focus {
 	border-color: #ff6663; /* Fallback */
 	border-color: var(--active-accent);
 	transition: color 0.1s, border-color 0.1s, margin 0.1s, box-shadow 0.1s, opacity 0.1s;
+}
+a.button.round { /* Circular buttons for UI */
+	box-shadow: none;
 }
 
 /*****************************/
@@ -601,14 +604,14 @@ a.button.closebtn:focus {
 		text-align: center;
 	}
 	#header-nav.header-container.right.responsive #nav ul li {
-		margin: 4px 80px;
+		margin: 8px 80px;
 		padding: 10px;
 		width: 50%;
 		right: 0;
-		height: 2.2em;
+		height: 2.5em;
 	}
 	#header-nav.header-container.right.responsive #nav ul li a {
-		font-size: 20pt;
+		font-size: 22pt;
 		text-align: center;
 	}
 	#header-nav.header-container.right.responsive #nav ul li a.active:hover, 
@@ -1322,8 +1325,7 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 
 
 .sub-container {
-	margin: 2em 1em;
-	background-color: green;
+	margin: 2em auto;
 }
 .sub-container a.button {
 	display: inline-block;
@@ -1333,9 +1335,8 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 }
 .sub-container.img-split img {
 	width: 45%;
-	margin: 2em 1em 0 1em;
+	margin: 0 1em 1em 1em;
 	border-radius: 16px;
-	border: 1px solid red;
 }
 .sub-container img.small-size {
 	width: auto;
@@ -1374,7 +1375,6 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 }
 .sub-container.img-single img {
 	width: 100%;
-	margin: 0 1em;
 	border-radius: 16px;
 }
 .sub-container p {
