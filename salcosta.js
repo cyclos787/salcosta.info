@@ -72,7 +72,6 @@ var navResponsive = document.getElementById("header-nav");
 function navOpen() {
     if (navResponsive.className === "header-container right") {
         navResponsive.className += " responsive";
-        // hideScrollBars();
     } else {
         navResponsive.className = "header-container right";
     }
@@ -80,7 +79,6 @@ function navOpen() {
 function navClose() { // Closes responsive nav
     if (navResponsive.className === "header-container right responsive") {
         navResponsive.className = "header-container right";
-        // showScrollBars();
     } else {
         navResponsive.className = "header-container right responsive";
     }
