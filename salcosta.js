@@ -37,7 +37,7 @@ function switchThemeEnter(event) {
 // Back to Top button
 
 
-// show button after scrolling 120px
+// show back to top button after scrolling 120px
 window.onscroll = function() {scrollAppearTopBtn()};
 
 function scrollAppearTopBtn() {

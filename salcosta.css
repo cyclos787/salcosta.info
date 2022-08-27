@@ -366,11 +366,13 @@ span.lastname {
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
-	width: 60px;
-	height: 80px;
+	width: 21px;
+	height: 39px;
 	border-radius: 50px;
-	border: 1px solid red;
+	border: 24px solid #fffbee; /* Fallback */
+	border: 24px solid var(--active-base);
 	pointer-events: all;
+	transition: border-color 0.6s;
 }
 #light-switch:hover .light-symbols, 
 #light-switch:focus .light-symbols {
@@ -380,22 +382,22 @@ span.lastname {
 	        animation: lightswitch-bounce .15s;
 }
 @keyframes lightswitch-bounce {
-	0% {top: -20px;}
-	33% {top: -22px;}
-	66% {top: -16px;}
-	100% {top: -20px;}
+	0% {top: -10px;}
+	33% {top: -12px;}
+	66% {top: -6px;}
+	100% {top: -10px;}
 }
 #light-switch input {
 	display: none;
 }
 span.light-symbols { /* UTF Symbols */
-	top: -20px;
+	top: -10px;
 	text-align: center;
 	font-size: 14pt;
 	display: block;
 	position: relative;
 	pointer-events: none;
-	line-height: 44pt;
+	line-height: 30pt;
 	color: #ff6663; /* Fallback */
 	color: var(--active-accent);
 	transition: color 0.6s, transform 0.6s;
@@ -404,7 +406,7 @@ label.theme-switch:hover {
 	cursor: pointer;
 }
 [data-theme="dark"] span.light-symbols {
-	transform: translateY(-42px);
+	transform: translateY(-24px);
 }
 
 
@@ -501,21 +503,24 @@ label.theme-switch:hover {
 	100% {bottom: 8px;}
 }
 #nav-button { /* Touch Nav button */
-	padding: 4px 10px 8px 10px;
+	padding: 0px 7px 6px 7px;
 	font-weight: bold;
+	font-size: 18pt;
 	position: fixed;
-	top: 1em;
-	right: 2em;
+	height: 30px;
+	overflow: hidden;
+	top: 20px;
+	right: 30px;
 	display: none;
 	z-index: 3;
 }
 a.button.closebtn { /* Touch Nav X button */
-	margin: 16px;
 	width: 6px;
 	height: 30px;
+	overflow: hidden;
 	position: fixed;
-	top: 1em;
-	right: 1em;
+	top: 20px;
+	right: 30px;
 	display: none;
 	box-shadow: none;
 }
@@ -545,7 +550,7 @@ a.button.closebtn:focus .times {
 }
 a.button.closebtn:hover, 
 a.button.closebtn:focus {
-	margin: 16px;
+	margin: 12px;
 }
 
 
@@ -788,15 +793,11 @@ h1.page-title { /* Page title banner text */
 
 #top-button { 
 	padding: 0px 11px 6px 11px;
-	bottom: 2em;
-	right: 3em;
+	bottom: 50px;
+	right: 30px;
 	position: fixed;
 	font-size: 18pt;
 	z-index: 3;
-}
-#top-button:hover, 
-#top-button:focus {
-	opacity: 1 !important;
 }
 
 
@@ -1251,11 +1252,11 @@ a.button.arrowbtn { /* Modal < > Buttons */
 }
 a.button.arrowbtn.leftarrow{
 	top: 45%;
-	left: 2em;
+	left: 30px;
 }
 a.button.arrowbtn.rightarrow{
 	top: 45%;
-	right: 2em;
+	right: 30px;
 }
 a.button.arrowbtn span.arrowsign { /* Arrow button text */
 	font-size: 20pt;
