@@ -88,6 +88,7 @@ html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100%;
+	min-width: 400px;
 	/* margin-right: calc(-1 * (100vw - 100%)); /* Keeps scrollbar from shifting content */
 }
 body {
@@ -115,9 +116,9 @@ body {
 }
 
 
-@media screen and (max-width: 1400px) { 
+@media screen and (max-width: 400px) { /* Turn overflow on below 400px width */
 	html {
-		margin: 0 auto;
+		overflow-x: auto;
 	}
 }
 
@@ -366,11 +367,11 @@ span.lastname {
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
-	width: 21px;
-	height: 39px;
+	width: 27px;
+	height: 45px;
 	border-radius: 50px;
-	border: 24px solid #fffbee; /* Fallback */
-	border: 24px solid var(--active-base);
+	border: 22px solid #fffbee; /* Fallback */
+	border: 22px solid var(--active-base);
 	pointer-events: all;
 	transition: border-color 0.6s;
 }
@@ -596,7 +597,7 @@ a.button.closebtn:focus {
 	}
 	#header-nav.header-container.right.responsive #nav { /* Responsive nav links */
 		width: 100%;
-		margin-top: 4em;
+		margin-top: 3em;
 		text-align: center;
 	}
 	#header-nav.header-container.right.responsive #nav ul li {
@@ -604,10 +605,10 @@ a.button.closebtn:focus {
 		padding: 10px;
 		width: 50%;
 		right: 0;
-		height: 3em;
+		height: 2.2em;
 	}
 	#header-nav.header-container.right.responsive #nav ul li a {
-		font-size: 24pt;
+		font-size: 20pt;
 		text-align: center;
 	}
 	#header-nav.header-container.right.responsive #nav ul li a.active:hover, 
@@ -685,7 +686,7 @@ a.button.closebtn:focus {
 	#header-nav.header-container.right.responsive #social {
 		width: 100%;
 		text-align: center;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	#header-nav.header-container.right.responsive #social .social-icon {
 		margin: 0 50px;
@@ -696,8 +697,8 @@ a.button.closebtn:focus {
 		display: inline-block;
 		position: relative;
 		width: 100px;
-		left: -10px;
-		height: 40px;
+		left: -14px;
+		height: 30px;
 	}
 }
 
@@ -1129,13 +1130,11 @@ span.selector-dot.right {
 	     -o-transition: transform 0.4s, filter 0.4s, opacity 0.4s;
 		    transition: transform 0.4s, filter 0.4s, opacity 0.4s;
 }
-.photo-gallery:hover img {
-	/* filter: sepia(100%); maybe later */
+.photo-gallery:hover img { /* Effect on all images on gallery hover */
 	opacity: 0.9;
 }
-.photo-tile:hover img {
+.photo-tile:hover img { /* Effect on single hovered image */
 	transform: scale(1.1);
-	/* filter: none; maybe later */
 	opacity: 1;
 	cursor: pointer;
 }
@@ -1234,11 +1233,6 @@ span.selector-dot.right {
 a.button.closebtn.modalclose { /* Modal X Button */
 	display: inline-block;
 	position: absolute;
-	opacity: 0.85;
-}
-a.button.closebtn.modalclose:hover, 
-a.button.closebtn.modalclose:focus {
-	opacity: 1;
 }
 
 a.button.arrowbtn { /* Modal < > Buttons */
@@ -1329,6 +1323,7 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 
 .sub-container {
 	margin: 2em 1em;
+	background-color: green;
 }
 .sub-container a.button {
 	display: inline-block;
@@ -1340,6 +1335,7 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 	width: 45%;
 	margin: 2em 1em 0 1em;
 	border-radius: 16px;
+	border: 1px solid red;
 }
 .sub-container img.small-size {
 	width: auto;
@@ -1353,7 +1349,7 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 
 @media screen and (max-width: 1000px) { /* Mobile/tablet */
 	.sub-container.img-split img {
-		margin: 0 0.5em;
+		margin: 0 0 0.5em 0;
 		width: 100%;
 	}
 	.sub-container img.small-size {
