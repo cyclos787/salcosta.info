@@ -310,12 +310,10 @@ a.button:focus {
 	width: 25%;
 	margin-left: 0;
 	margin-right: auto;
-	border: 1px solid red;
 }
 #header-nav.header-container.right {
 	margin-right: 0;
 	margin-left: auto;
-	bordeR: 1px solid red;
 	transition: opacity 0.3s;
 }
 
@@ -757,6 +755,9 @@ h1.page-title { /* Page title banner text */
 	#page-container {
 		padding: 1em;
 	}
+	#page-banner img {
+		opacity: 1;
+	}
 }
 @media screen and (max-width: 600px) { /* Mobile page banner */
 	h1.page-title {
@@ -805,7 +806,7 @@ h1.page-title { /* Page title banner text */
 
 
 #page-container.index {
-	bordeR: none;
+	border: none;
 }
 h1.page-title.home {
 	font-size: 80pt;
@@ -813,6 +814,7 @@ h1.page-title.home {
 }
 .index-content {
 	display: inline-block;
+	top: 0;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -829,6 +831,22 @@ span.home-text {
 span.home-text:hover {
 	opacity: 0.2;
 	cursor: default;
+}
+#page-banner.index {
+	position: relative;
+	display: block;
+	height: 100%;
+	overflow: visible;
+}
+#page-banner.index img.banner-index { /* make visible in IE */ 
+	position: absolute;
+	width: 120%;
+	max-height: 200%;
+	transform: translate(-50%, -50%);
+	top: 60%;
+	left: 50%;
+	pointer-events: none;
+	z-index: -1;
 }
 
 @media screen and (max-width: 1600px) { 
