@@ -248,8 +248,8 @@ a.button { /* Button defaults */
 	text-decoration: none;
 	text-transform: uppercase;
 	border-radius: 30px;
-	box-shadow: -4px 4px #1d1d1d; /* Fallback */
-	box-shadow: -4px 4px var(--inverse-base);
+	box-shadow: -2px 2px #1d1d1d; /* Fallback */
+	box-shadow: -2px 2px var(--inverse-base);
 	border: 6px double #1d1d1d; /* Fallback */
 	border: 6px double var(--inverse-base);
 	color: #ff6663; /* Fallback */
@@ -260,7 +260,7 @@ a.button { /* Button defaults */
 }
 a.button:hover,
 a.button:focus {
-	margin: 16px 16px 8px 8px;
+	margin: 14px 14px 10px 10px;
 	box-shadow: none;
 	cursor: pointer;
 	border-color: #ff6663; /* Fallback */
@@ -347,7 +347,7 @@ span.lastname {
 
 
 #light-switch { /* Dark mode switch */
-	margin: 14px 60px;
+	margin: 14px 0 14px 10%;
 	height: 36px;
 	width: 18px;
 	min-width: 18px;
@@ -562,8 +562,7 @@ a.button.closebtn:focus {
 		display: inline-block;
 	}
 	#header-nav.header-container.right {
-		visibility: hidden;
-		opacity: 0;
+		display: none;
 	}
 	#header-nav.header-container.right a.button.closebtn.navclose {
 		display: inline-block;
@@ -1390,9 +1389,19 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 	text-align: left;
 	display: inline-block;
 }
+.youtube-container {
+	position: relative;
+	width: 50%;
+	display: inline-block;
+	padding-top: 28.12%; /* 16:9 aspect ratio */
+}
 iframe.youtube {
-	width: 840px;
-	height: 472px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
 }
 
 /**********************************/
@@ -1404,18 +1413,14 @@ iframe.youtube {
 	.sub-container p {
 		font-size: 12pt;
 	}
-	iframe.youtube {
-		width: 560px;
-		height: 315px;
-	}
 }
 @media screen and (max-width: 800px) { /* mobile screens */
 	.sub-container.img-single {
 		width: 90%;
 	}
-	iframe.youtube {
-		width: 420px;
-		height: 236px;
+	.youtube-container {
+		width: 80%;
+		padding-top: 45%;
 	}
 }
 
@@ -1436,7 +1441,7 @@ iframe.youtube {
 	display: block;
 	text-align: center;
 }
-span.footer-dots {
+span.dots-break {
 	padding: 4em 0 2em 0;
 	display: block;
 	text-align: center;
@@ -1444,11 +1449,11 @@ span.footer-dots {
 	color: var(--active-accent);
 	transition: color 0.6s;
 }
-[data-theme="dark"] span.footer-dots {
+[data-theme="dark"] span.dots-break {
 	color: #fffbee; /* Fallback */
 	color: var(--inverse-base);
 }
-span.footer-dots::after { /* Footer dot content */
+span.dots-break::after { /* break dot content */
 	content: "\2022 \2003 \2003 \2003 \2022 \2003 \2003 \2003 \2022";
 }
 span.copyright { /* Footer Copyright */
