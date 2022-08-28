@@ -53,15 +53,6 @@ function scrollToTop() {
     window.scrollTo({top: 0});
 }
 
-// Hide / Show scroll bar for pop ups
-
-function hideScrollBars() {
-    document.documentElement.style.overflowY = "hidden";
-}
-function showScrollBars() {
-    document.documentElement.style.overflowY = "visible";
-}
-
 
 // --------------------------------------
 // Responsive Navigation for mobile
@@ -134,7 +125,6 @@ function openModal(element) {
     else if (element.getElementsByTagName('img')[0].className == "") {
         document.getElementById("img00").className = "";
     }
-    hideScrollBars();
     document.getElementById("modal00").className = "visible";
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
@@ -145,7 +135,6 @@ function openModal(element) {
 // Close the modal
 function closeModal() {
     document.getElementById("modal00").className = "hidden";
-    showScrollBars();
 }
 
 // Next & Previous Photo functions

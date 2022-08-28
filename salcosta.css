@@ -156,9 +156,6 @@ h3 	{
 	color: var(--active-accent);
 	transition: color 0.6s;
 }
-h3.portfolio {
-	margin: 1em;
-}
 p {
 	margin: 0 auto;
 	width: 70%;
@@ -248,7 +245,7 @@ a.button { /* Button defaults */
 	font-size: 16pt;
 	text-decoration: none;
 	text-transform: uppercase;
-	border-radius: 30px;
+	border-radius: 40px;
 	box-shadow: -2px 2px #1d1d1d; /* Fallback */
 	box-shadow: -2px 2px var(--inverse-base);
 	border: 6px double #1d1d1d; /* Fallback */
@@ -269,7 +266,47 @@ a.button:focus {
 	transition: color 0.1s, border-color 0.1s, margin 0.1s, box-shadow 0.1s, opacity 0.1s;
 }
 a.button.round { /* Circular buttons for UI */
+	overflow: hidden;
+	height: 30px;
+	width: 6px;
+}
+a.button.round.no-shadow { /* removes box shadow */
 	box-shadow: none;
+	margin: 14px 14px 10px 10px;
+}
+a.button.fixed-top { /* top right screen location */
+	position: fixed;
+	top: 20px;
+	right: 30px;
+}
+a.button.round.close { /* X button */
+	width: 6px;
+	height: 30px;
+}
+a.button.round span.times { /* button 'X' */
+	font-size: 32pt;
+	position: relative;
+	display: inline-block;
+	left: -10px;
+	top: -10px;
+}
+a.button.round.close.fixed-top:hover span.times, 
+a.button.round.close.fixed-top:focus span.times {
+	animation: button-pulse .15s;
+}
+@keyframes button-pulse {
+	50% {transform: scale(1.2)}
+}
+
+.button-target {
+	/* background-color: rgba(255,0,0,0.3); */ /* Debug target area */
+	position: absolute;
+	top: -1.8em;
+	left: -1.9em;
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
 }
 
 /*****************************/
@@ -507,54 +544,18 @@ label.theme-switch:hover {
 	100% {bottom: 8px;}
 }
 #nav-button { /* Touch Nav button */
-	padding: 0px 7px 6px 7px;
-	font-weight: bold;
-	font-size: 18pt;
-	position: fixed;
-	height: 30px;
-	overflow: hidden;
-	top: 20px;
-	right: 30px;
 	display: none;
 	z-index: 3;
 }
-a.button.closebtn { /* Touch Nav X button */
-	width: 6px;
-	height: 30px;
-	overflow: hidden;
-	position: fixed;
-	top: 20px;
-	right: 30px;
-	display: none;
-	box-shadow: none;
-}
-a.button.closebtn .times { /* button 'X' */
-	font-size: 32pt;
-	display: inline-block;
+#nav-button span.menu-lines { /* Menu symbol */
+	font-size: 18pt;
 	position: relative;
-	left: -10px;
-	top: -10px;
+	top: -3px;
+	left: -8px;
+	font-weight: bold;
 }
-a.button.closebtn:hover .times, 
-a.button.closebtn:focus .times {
-	animation: button-pulse .15s;
-}
-@keyframes button-pulse {
-	50% {transform: scale(1.2)}
-}
-.button-target {
-	/* background-color: rgba(255,0,0,0.3); */ /* Debug target area */
-	position: absolute;
-	top: -1.8em;
-	left: -1.9em;
-	display: block;
-	width: 120px;
-	height: 120px;
-	border-radius: 60px;
-}
-a.button.closebtn:hover, 
-a.button.closebtn:focus {
-	margin: 12px;
+#header-nav.header-container.right a.button.round.close { /* Hide X button */
+	display: none;
 }
 
 
@@ -578,7 +579,7 @@ a.button.closebtn:focus {
 	#header-nav.header-container.right {
 		display: none;
 	}
-	#header-nav.header-container.right a.button.closebtn.navclose {
+	#header-nav.header-container.right a.button.round.close {
 		display: inline-block;
 	}
 	#header-nav.header-container.right.responsive { /* Responsive nav container */
@@ -629,11 +630,6 @@ a.button.closebtn:focus {
 	}
 	#top-button {
 		display: none;
-	}
-}
-@media screen and (max-width: 800px) { /* Mobile Nav */
-	#nav-button, .button.closebtn {
-		right: 1em;
 	}
 }
 
@@ -690,11 +686,13 @@ a.button.closebtn:focus {
 		width: 100%;
 		text-align: center;
 		margin-top: 1em;
+		margin: 0 auto;
 	}
 	#header-nav.header-container.right.responsive #social .social-icon {
 		margin: 0 50px;
 		width: 100px;
 		height: 50px;
+		left: 4px;
 	}
 	#social .social-icon img {
 		display: inline-block;
@@ -796,12 +794,19 @@ h1.page-title { /* Page title banner text */
 /******************************/
 
 #top-button { 
-	padding: 0px 11px 6px 11px;
 	bottom: 50px;
 	right: 30px;
 	position: fixed;
-	font-size: 18pt;
 	z-index: 3;
+	width: 6px;
+	height: 30px;
+}
+span.top-arrow {
+	font-size: 22pt;
+	position: relative;
+	font-weight: bold;
+	left: -4px;
+	top: -6px;
 }
 
 
@@ -1219,6 +1224,9 @@ span.selector-dot.right {
 	top: 0;
 	transform: translate(-50%, 0);
 }
+#modal00 a.button.round.close {
+	margin: 12px;
+}
 /*
 #caption { old caption
     margin: 0 auto;
@@ -1233,53 +1241,46 @@ span.selector-dot.right {
 }
 */
 
-a.button.closebtn.modalclose { /* Modal X Button */
-	display: inline-block;
-	position: absolute;
-}
-
-a.button.arrowbtn { /* Modal < > Buttons */
-	margin: 16px;
-	width: 8px;
-	height: 32px;
-	position: absolute;
-	display: inline-block;
-	box-shadow: none;
+a.button.round.arrow { /* Modal < > Buttons */
+	width: 6px;
+	height: 30px;
 	z-index: 5;
 }
-a.button.arrowbtn.leftarrow{
+a.button.round.fixed-left {
 	top: 45%;
 	left: 30px;
+	position: fixed;
 }
-a.button.arrowbtn.rightarrow{
+a.button.round.fixed-right{
 	top: 45%;
 	right: 30px;
+	position: fixed;
 }
-a.button.arrowbtn span.arrowsign { /* Arrow button text */
+a.button span.left-arrow { /* Arrow button text */
 	font-size: 20pt;
 	position: relative;
+	top: -1px;
+	left: -10px;
+}
+a.button span.right-arrow {
+	font-size: 20pt;
+	position: relative;
+	top: -1px;
 	left: -6px;
-}
-a.button.arrowbtn.leftarrow span.arrowsign{
-	left: -9px;
-}
-a.button.arrowbtn:hover,
-a.button.arrowbtn:focus {
-	margin: 16px;
 }
 .button-target.arrow {
 	height: 200px;
 	top: -3.6em;
 }
-a.button.arrowbtn.leftarrow:hover span.arrowsign, 
-a.button.arrowbtn.leftarrow:focus span.arrowsign {
+a.button.round.arrow.fixed-left:hover span.left-arrow, 
+a.button.round.arrow.fixed-left:focus span.left-arrow {
 	animation: leftarrow-bounce .15s;
 }
 @keyframes leftarrow-bounce {
-	50% {left: -14px}
+	50% {left: -15px}
 }
-a.button.arrowbtn.rightarrow:hover span.arrowsign, 
-a.button.arrowbtn.rightarrow:focus span.arrowsign {
+a.button.round.arrow.fixed-right:hover span.right-arrow, 
+a.button.round.arrow.fixed-right:focus span.right-arrow {
 	animation: rightarrow-bounce .15s;
 }
 @keyframes rightarrow-bounce {
@@ -1324,6 +1325,13 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 
 
 
+.collapse-container h3 {
+	display: inline-block;
+}
+.collapse-container a.button {
+	vertical-align: middle;
+}
+
 .sub-container {
 	margin: 2em auto;
 }
@@ -1342,6 +1350,7 @@ a.button.arrowbtn.rightarrow:focus span.arrowsign {
 	width: auto;
 	max-width: 100%;
 }
+
 
 /**********************************/
 /* --- Responsive Digital Art --- */
