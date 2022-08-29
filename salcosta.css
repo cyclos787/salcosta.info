@@ -88,7 +88,6 @@ html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100%;
-	/* min-width: 400px; */
 	/* margin-right: calc(-1 * (100vw - 100%)); /* Keeps scrollbar from shifting content */
 }
 body {
@@ -159,7 +158,6 @@ h3 	{
 p {
 	margin: 0 auto;
 	width: 70%;
-	min-width: 400px;
 	font-family: 'Gill Sans MT';
 	font-size: 16pt;
 	color: #1d1d1d; /* Fallback */
@@ -591,7 +589,7 @@ label.theme-switch:hover {
 		backdrop-filter: blur(12px);
 		position: fixed;
 		display: block;
-		visibility: visible;
+		/*visibility: visible;*/
 		opacity: 1;
 		left: 0;
 		right: 0;
@@ -756,7 +754,6 @@ h1.page-title { /* Page title banner text */
  @media screen and (max-width: 1400px) { /* Smaller Screen banner */
 	#page-banner img {
 		top: 60%;
-		min-width: 400px;
 	}
 } 
 @media screen and (max-width: 1200px) { /* Tablet page banner */
@@ -777,7 +774,6 @@ h1.page-title { /* Page title banner text */
 	#page-banner img {
 		width: 100%;
 		top: 65%;
-		min-width: 100px;
 		right: 0;
 		left: 0;
 	}
