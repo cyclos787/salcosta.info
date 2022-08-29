@@ -88,7 +88,7 @@ html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100%;
-	min-width: 400px;
+	/* min-width: 400px; */
 	/* margin-right: calc(-1 * (100vw - 100%)); /* Keeps scrollbar from shifting content */
 }
 body {
