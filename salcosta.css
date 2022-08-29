@@ -114,6 +114,15 @@ body {
 	opacity: 1;
 }
 
+@media screen and (max-width: 400px) { 
+	html {
+		overflow-x: auto;
+	}
+	body {
+		max-width: 96%;
+	}
+}
+
 /************************/
 /* --- Type Styling --- */
 /************************/
@@ -456,7 +465,7 @@ label.theme-switch:hover {
 	top: 79px;
 	position: absolute;
 	pointer-events: none;
-	visibility: hidden;
+	display: none;
 	background-color: var(--inverse-base);
 }
 #alignment-bar-debug.top { /* DEBUG */
@@ -596,14 +605,14 @@ label.theme-switch:hover {
 		text-align: center;
 	}
 	#header-nav.header-container.right.responsive #nav ul li {
-		margin: 10px auto;
+		margin: 5px auto;
 		padding: 10px;
 		width: 50%;
 		right: 0;
-		height: 2.4em;
+		height: 2.2em;
 	}
 	#header-nav.header-container.right.responsive #nav ul li a {
-		font-size: 26pt;
+		font-size: 20pt;
 		text-align: center;
 	}
 	#header-nav.header-container.right.responsive #nav ul li a.active:hover, 
@@ -677,7 +686,7 @@ label.theme-switch:hover {
 		width: 100%;
 		text-align: center;
 		margin: 0 auto;
-		margin-top: 1.4em;
+		margin-top: 1.2em;
 	}
 	#header-nav.header-container.right.responsive #social .social-icon {
 		margin: 0 auto;
@@ -688,7 +697,6 @@ label.theme-switch:hover {
 		display: inline-block;
 		position: relative;
 		padding: 12px;
-		left: 4px;
 		width: 100px;
 		height: 30px;
 	}
@@ -848,6 +856,7 @@ span.home-text:hover {
 	transform: translate(-50%, -50%);
 	top: 60%;
 	left: 50%;
+	opacity: 0.6;
 	pointer-events: none;
 	z-index: -1;
 }
@@ -870,10 +879,10 @@ span.home-text:hover {
 }
 @media screen and (max-width: 1100px) { 
 	h1.page-title.home {
-		font-size: 48pt;
+		font-size: 40pt;
 	}
 	span.home-text {
-		font-size: 24pt;
+		font-size: 22pt;
 	}
 	#page-banner.index img.banner-index { 
 		width: 200%;
@@ -884,6 +893,7 @@ span.home-text:hover {
 	.index-content {
 	display: block;
 	width: 100%;
+	max-width: 350px;
 	}
 	h1.page-title.home {
 		padding: 2em 0 0.5em 10px;
@@ -1034,10 +1044,17 @@ p.job-role {
 	display: inline-block;
 	position: relative;
 	right: 0;
-	padding: 2em 0 2em 8em;
+	padding: 2em 0 2em 20%;
 }
 
-
+@media screen and (max-width: 600px) { /* Mobile Screen */
+	.sub-container.music {
+		text-align: center;
+	}
+	.audio-player {
+		padding: 2em 0;
+	}
+}
 
 
 
@@ -1330,7 +1347,6 @@ button.collapsible {
 	border: 1px solid #ff6663; /* Fallback */
 	border: 1px solid var(--active-accent);
 	border-radius: 16px;
-	overflow: hidden;
 }
 button.collapsible h3:after {
 	content: "\002B";
