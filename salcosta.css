@@ -697,6 +697,7 @@ label.theme-switch:hover {
 		display: inline-block;
 		position: relative;
 		padding: 12px;
+		left: 4px;
 		width: 100px;
 		height: 30px;
 	}
@@ -1327,13 +1328,41 @@ a.button.round.arrow.fixed-right:focus span.right-arrow {
 
 
 
-
-.collapse-container h3 {
+button.collapsible {
 	display: inline-block;
+	text-align: left;
+	margin: 0 auto;
+	padding: 0 1em;
+	height: 4em;
+	width: 80%;
+	max-width: 800px;
+	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid #ff6663; /* Fallback */
+	border: 1px solid var(--active-accent);
+	border-radius: 16px;
+	overflow: hidden;
 }
-.collapse-container a.button {
-	vertical-align: middle;
+button.collapsible h3:after {
+	content: "\002B";
+	float: right;
+	transform: scale(1.3);
+	color: #1d1d1d; /* Fallback */
+	color: var(--inverse-base);
 }
+button.collapsible.active h3:after {
+	content: "\2013";
+	position: relative;
+	top: -4px;
+	left: -1px;
+}
+.collapse-content {
+	margin: 2em 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.6s;
+}
+
 
 .sub-container {
 	margin: 2em auto;
