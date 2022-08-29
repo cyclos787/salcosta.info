@@ -114,13 +114,6 @@ body {
 	opacity: 1;
 }
 
-
-@media screen and (max-width: 400px) { /* Turn overflow on below 400px width */
-	html {
-		overflow-x: auto;
-	}
-}
-
 /************************/
 /* --- Type Styling --- */
 /************************/
