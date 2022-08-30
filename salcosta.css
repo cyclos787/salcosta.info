@@ -113,6 +113,9 @@ body {
 	visibility: visible;
 	opacity: 1;
 }
+.scroll-disabled {
+	overflow: hidden;
+}
 
 @media screen and (max-width: 400px) { 
 	html {
@@ -212,11 +215,6 @@ tab1 {
 	}
 	h3 {
 		font-size: 14pt;
-	}
-}
-@media screen and (max-width: 500px) { /* Tiny screens */
-	h3 {
-		font-size: 13pt;
 	}
 }
 
@@ -979,7 +977,6 @@ span.dots-content::after { /* Dot content */
 
 h2.category {
 	padding-left: 0;
-	display: block;
 }
 p.job-role {
 	font-size: 14pt;
@@ -1428,7 +1425,7 @@ button.collapsible.active h3:after {
 }
 @media screen and (max-width: 600px) {
 	button.collapsible {
-		width: 90%;
+		width: 100%;
 	}
 }
 

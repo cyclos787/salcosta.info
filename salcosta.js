@@ -111,6 +111,7 @@ var modalIndex = 0;
 
 function openModal(element) {
     document.getElementById("img00").src = element.getElementsByTagName('img')[0].src;
+    document.documentElement.className += "scroll-disabled";
 
     if (element.className == "photo-tile film") {
         modalIndex = photoTilesFilmArray.indexOf(element);
@@ -135,6 +136,7 @@ function openModal(element) {
 // Close the modal
 function closeModal() {
     document.getElementById("modal00").className = "hidden";
+    document.documentElement.className = "";
 }
 
 // Next & Previous Photo functions
@@ -214,6 +216,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// ---------------------------
 // Collapsible
 
 var collapse = document.getElementsByClassName("collapsible");
