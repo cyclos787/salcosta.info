@@ -115,6 +115,7 @@ body {
 }
 .scroll-disabled {
 	overflow: hidden;
+	height: 100%;
 }
 
 @media screen and (max-width: 400px) { 
