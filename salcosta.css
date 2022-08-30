@@ -1452,7 +1452,7 @@ button.collapsible.active h3:after {
 }
 .img-container p { /* image caption */
 	margin: 0;
-	font-size: 14pt;
+	font-size: 12pt;
 	padding-left: 1em;
 }
 #page-container.gamedesign p {
