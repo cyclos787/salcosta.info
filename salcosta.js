@@ -111,7 +111,7 @@ var modalIndex = 0;
 
 function openModal(element) {
     document.getElementById("img00").src = element.getElementsByTagName('img')[0].src;
-    $('body').bind('touchmove', function(e){e.preventDefault()}); // Stop scrolling on mobile
+    $('html').bind('touchmove', function(e){e.preventDefault()}); // Stop scrolling on mobile
 
     if (element.className == "photo-tile film") {
         modalIndex = photoTilesFilmArray.indexOf(element);
@@ -136,7 +136,7 @@ function openModal(element) {
 // Close the modal
 function closeModal() {
     document.getElementById("modal00").className = "hidden";
-    $('body').unbind('touchmove'); // Re-enable scrolling
+    $('html').unbind('touchmove'); // Re-enable scrolling
 }
 
 // Next & Previous Photo functions
