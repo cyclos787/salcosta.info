@@ -111,7 +111,6 @@ var modalIndex = 0;
 
 function openModal(element) {
     document.getElementById("img00").src = element.getElementsByTagName('img')[0].src;
-    // document.documentElement.className += "scroll-disabled"; // Disable scrolling
 
     if (element.className == "photo-tile film") {
         modalIndex = photoTilesFilmArray.indexOf(element);
@@ -136,7 +135,6 @@ function openModal(element) {
 // Close the modal
 function closeModal() {
     document.getElementById("modal00").className = "hidden";
-    //document.documentElement.className = ""; // Re-enable scrolling
 }
 
 // Next & Previous Photo functions

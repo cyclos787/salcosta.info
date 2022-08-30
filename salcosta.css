@@ -113,10 +113,6 @@ body {
 	visibility: visible;
 	opacity: 1;
 }
-.scroll-disabled {
-	overflow: hidden;
-	height: 100%;
-}
 
 @media screen and (max-width: 400px) { 
 	html {
@@ -1136,6 +1132,11 @@ span.selector-dot.right {
 .photo-gallery { /* Gallery container */
 	column-count: 3;
 	column-gap: 6px;
+	-webkit-user-select: none;  /* Disable right click */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 .photo-gallery.hidden {
 	display: none;
