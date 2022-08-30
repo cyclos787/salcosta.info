@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+    
+    <!-- ------------- -->
+    <!--   Site Head   -->
+    <!-- ------------- -->
+
+    <head>
+        <!-- Meta tags -->
+		<meta charset="utf-8">
+		<title>Sal Costa - Photography</title>
+        <meta name="description" content="Sal Costa's Photography Portfolio">
+        <meta name="keywords" content="Sal, Costa, Salvatore, Detroit, Michigan, United States, design, designer, web, website, art, artist, creator, creative, digital, 
+                    graphic, video, game, games, UX, UI, photography, photo, film, 35mm, music, sound, audio, production, producer, freelance, portfolio, resume">
+        <meta name="author" content="Sal Costa">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" type="text/css" href="salcosta.css">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+        <link rel="shortcut_icon" href="favicon.ico">
+    </head>
+
+    <!-- ------------- -->
+    <!--   Site Body   -->
+    <!-- ------------- -->
+
+    <body>
+
+        <a id="top"></a>
+        
+        <!-- Header -->
+        <header>
+            <div id="header">
+                
+                <div class="header-container left">
+                    <a href="index.html">
+                        <h1 id="name">Sal<span class="lastname">Costa</span></h1>
+                    </a>
+
+                    <div id="light-switch" title="Change the Theme" alt="Switch between light and dark mode." tabindex="0" onkeydown="switchThemeEnter(event);">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox"/>
+                            <span class="light-symbols">&#9728;&#xFE0E;<br>&#9687;&#xFE0E;</span> <!-- Sun & Moon Symbols -->
+                            <div class="switch-target"></div>
+                        </label>
+                    </div>  
+                </div>
+
+                <!-- Responsive nav button -->
+                <a href="javascript:void(0);" class="button round fixed-top" id="nav-button" onclick="navOpen()" title="Open Navigation" alt="Open website navigation.">
+                    <span class="menu-lines">&#9776;&#xFE0E;</span>
+                    <div class="button-target"></div>
+                </a>
+
+                <div id="header-nav" class="header-container right">
+
+                    <!-- Responsive nav X button -->
+                    <a href="javascript:void(0);" class="button round close no-shadow fixed-top" onclick="navClose()" title="Close Navigation" alt="Close website navigation.">
+                        <span class="times">&times;&#xFE0E;</span>
+                        <div class="button-target"></div>
+                    </a>
+
+                    <div id="nav"> <!-- Navigation Bar -->
+                        <ul>
+                            <li>
+                                <a href="resume.html" title="Resume">Resume<br>Resume</a>
+                            </li>
+                            <li>
+                                <a href="music.html" title="Music">Music<br>Music</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="active" title="Photography">Photos<br>Photos</a>
+                            </li>
+                            <li>
+                                <a href="digitalart.html" title="Digital Art">Digital<br>Digital</a>
+                            </li>
+                            <li>
+                                <a href="gamedesign.html" title="Game Design">Games<br>Games</a>
+                            </li>	
+                        </ul>
+                    </div>
+                    
+                    <div id="social">
+                        <div class="social-icon linkedin">
+                            <a href="https://www.linkedin.com/in/salccosta/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <img src="assets/icon_linkedin.svg" alt="Sal Costa on LinkedIn." />
+                            </a>
+                        </div>
+                    </div>
+
+                </div> <!-- /container right -->
+            </div> <!-- /header -->
+        </header>
+        
+        <!-- ------------------------- -->
+        <!-- Page Content (Photography)-->
+        <!-- ------------------------- -->
+        
+        <div id="page-container" class="photos">
+            <div id="gallery-tab-container">
+                <a href="javascript:void(0);" onclick="galleryToggle(this);" class="gallery-tab digital open-tab" title="Digital Photos">Digital</a>
+                <a href="javascript:void(0);" onclick="galleryToggle(this);" class="gallery-tab film" title="Film Photos">Film</a>
+                <div id="gallery-tab-select">
+                    <span class ="selector-dot left">&bull;</span>
+                </div>
+            </div>
+
+            <div class="photo-gallery digital">
+
+                <div class="photo-tile" onclick="openModal(this);">
+                    <img src="portfolio/photos/salvatore-costa-photography-antelope-canyon-arizona.jpg" alt="Antelope Canyon, Arizona."/>
+                </div>
+                <div class="photo-tile" onclick="openModal(this);">
+                    <img src="portfolio/photos/salvatore-costa-photography-badlands-national-park-south-dakota.jpg" alt="Badlands National Park, South Dakota." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-bison-yellowstone-national-park-wyoming.jpg" alt="Bison in Yellowstone National Park." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-devils-tower-wyoming.jpg" alt="Devils Tower, Wyoming." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)" >
+                    <img src="portfolio/photos/salvatore-costa-photography-elk-olympic-national-park-washington.jpg" alt="An Elk in the brush of Olympic National Park." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-glacier-national-park-montana.jpg" alt="A kettle lake in Glacier National Park, Montana." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-honey-bee-pollen.jpg" class="portrait" alt="A honey bee coated in pollen on a leaf." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-machu-picchu-peru.jpg" alt="Sunrise at Machu Picchu, Peru." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-olympic-national-park-washington.jpg" alt="Olympic National Park, Washington." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-pacific-coast-washington.jpg" alt="A sea stack at Ruby Beach, Washington." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-pacific-coast-washington-1.jpg" alt="Sunset over the ocean at Ruby Beach, Washington." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-pacific-coast-washington-2.jpg" alt="Sea Stacks at dusk on Ruby Beach, Washington." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-proxy-falls-oregon.jpg" alt="Cascading waterfalls in Oregon." />
+                </div>
+                <div class="photo-tile" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-photography-yellowstone-national-park-wyoming.jpg" alt="Calcium deposits in Yellowstone National Park." />
+                </div>
+
+                <script defer src="salcosta.js"></script>
+                <script src="jquery-3.6.0.min.js"></script>
+
+                <!-- Get photo divs for random sorting -->
+                <script>
+                    var photoTiles = $("div.photo-tile");
+                    var photoTilesArray = Array.from(photoTiles);
+                </script>
+
+            </div> <!-- /photo gallery digital -->
+
+
+            <div class="photo-gallery film hidden">
+
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-alligator-georgia.jpg" alt="An alligator basking in Magnolia Springs State Park, Georgia." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-damselfly-south-carolina.jpg" alt="A damselfly in Myrtle Beach State Park, South Carolina." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-dragonfly-georgia.jpg" alt="A Dragonfly on a dried plank of wood." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-frog-south-carolina.jpg" alt="A frog blending in with algae and plantlife in a pond." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-lizard-south-carolina.jpg" alt="A lizard on a stump turning its head." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-on-air.jpg" alt="A neon sign that reads &quot;On Air&quot;." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-proxy-falls-oregon.jpg" alt="Cascading waterfalls at Proxy Falls, Oregon." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-puppy.jpg" alt="A black and white puppy on a stone walkway." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-purple-lupine-flower-maine.jpg" alt="A patch of purple lupine flowers." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-rattlesnake-redwood-california.jpg" alt="A rattlesnake crossing a trail in Northern California." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-trinidad-cuba.jpg" alt="A gallery doorway letting in sunlight; Trinidad, Cuba." />
+                </div>
+                <div class="photo-tile film" onclick="openModal(this)">
+                    <img src="portfolio/photos/salvatore-costa-film-photography-white-mountain-new-hampshire.jpg" alt="A foggy view of a mountain top in White Mountain National Park." />
+                </div>
+
+                <!-- Randomly assort film images on page -->
+                <script>
+                    var photoTilesFilm = $("div.photo-tile.film");
+                    var photoTilesFilmArray = Array.from(photoTilesFilm);
+                    var photoSet = [photoTiles, photoTilesFilm];
+                    var i, j = 0;
+
+                    for (i = 0; i < 2; i++) {
+                        var elementInnerHtmls = [];
+                        var numberOfElements = photoSet[i].length;
+                        for(j = 0; j < numberOfElements; j++){
+                            elementInnerHtmls.push(photoSet[i][j].innerHTML); 
+                        }
+                        var checkedIndexes = [];
+                        for(j = 0; j < numberOfElements; j++){
+                            var randomIndex = Math.floor(Math.random()*30) % numberOfElements;
+                            while(checkedIndexes[randomIndex] != undefined){
+                                randomIndex = Math.floor(Math.random()*30) % numberOfElements;    
+                            }
+                            checkedIndexes[randomIndex] = true;
+                            photoSet[i][j].innerHTML = elementInnerHtmls[randomIndex];    
+                        }
+                    }    
+                </script>
+
+            </div> <!-- /photo gallery film -->
+
+            <!-- Photo Modal-->
+
+            <div id="modal00" class="hidden" oncontextmenu="return false;">
+                <div id="modaltarget" onclick="closeModal()",>
+                    <img id="img00" />
+                    <!-- <div id="caption"></div> -->
+                    <a href="javascript:void(0);" class="button round close no-shadow fixed-top" title="Close" alt="Close photo viewer.">
+                        <span class="times">&times;&#xFE0E;</span>
+                        <div class="button-target"></div>
+                    </a>
+                </div>
+                <a href="javascript:void(0);" class="button round arrow no-shadow fixed-left" onclick="galleryPrevious()" title="Previous" alt="View previous photo.">
+                    <span class="left-arrow">&#9664;&#xFE0E;</span>
+                    <div class="button-target arrow"></div>
+                </a>
+                <a href="javascript:void(0);" class="button round arrow no-shadow fixed-right" onclick="galleryNext()" title="Next" alt="View next photo.">
+                    <span class="right-arrow">&#9654;&#xFE0E;</span>
+                    <div class="button-target arrow"></div>
+                </a>
+            </div> <!-- /modal -->
+            
+        </div> <!-- /page container -->
+
+        <!-- Back to top button -->
+        <a href="#top" id="top-button" class="button round hidden" title="Scroll to Top" alt="Scroll to top of page.">
+            <span class="top-arrow">&#8593;&#xFE0E;</span>
+        </a>
+
+        <footer>
+            <div id="footer">
+                <span class="dots-break"></span>
+                <span class="copyright">&copy;&#xFE0E; 2022 Sal Costa</span>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
