@@ -86,7 +86,7 @@ html {
 	background-color: var(--active-base);
 	transition: background-color 0.6s;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
+	overflow: hidden;
 	max-width: 100%;
 	/* margin-right: calc(-1 * (100vw - 100%)); /* Keeps scrollbar from shifting content */
 }
