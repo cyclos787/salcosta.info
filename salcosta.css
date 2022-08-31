@@ -939,11 +939,11 @@ span.splash-char:hover {
 		font-size: 40pt;
 	}
 	h1.splash.name {
-		top: 25%;
+		top: 15%;
 		margin-left: 10%;
 	}
 	h1.splash.design {
-		top: 40%;
+		top: 25%;
 		margin-left: 35%;
 	}
 }
