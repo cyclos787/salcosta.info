@@ -752,6 +752,7 @@ h1.page-title { /* Page title banner text */
 	transform: translateY(-50%);
 	filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(3969%) hue-rotate(326deg) brightness(117%) contrast(119%);
 	transition: filter 0.6s;
+	z-index: -1;
 }
 [data-theme="dark"] #page-banner img {
 	filter: brightness(0) saturate(100%) invert(88%) sepia(4%) saturate(1819%) hue-rotate(322deg) brightness(114%) contrast(103%);
@@ -788,7 +789,8 @@ h1.page-title { /* Page title banner text */
 }
 @media screen and (max-width: 600px) { /* Mobile page banner */
 	h1.page-title {
-		padding-left: 10px;
+		/* padding-left: 10px; */
+		padding: 1em 1em 3em 10px;
 	}
 	#page-banner img {
 		width: 100%;
@@ -830,97 +832,121 @@ span.top-arrow {
 
 
 
-/**********************/
-/* --- Index page --- */
-/**********************/
+/*****************************/
+/* --- Index/Splash Page --- */
+/*****************************/
 
 
 
 
-#page-container.index {
-	border: none;
-}
-h1.page-title.home {
-	font-size: 80pt;
-	padding: 1em 0 3em 70px; /* top was 2em*/
-}
-.index-content {
-	display: inline-block;
+#splash-container { /* full page container */
+	position: fixed;
 	top: 0;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	width: 100%; /* 49 for text */
+	right: 0;
+	lefT: 0;
+	bottom: 0;
+	width: 110%;
+	left: -5%;
+	overflow: hidden;
+	pointer-events: none;
 }
-span.home-text {
-	margin: 0 auto;
-	font-family: 'Gill Sans MT';
-	font-size: 46pt;
-	color: #1d1d1d; /* Fallback */
-	color: var(--inverse-base);
-	transition: color 0.6s, opacity 0.2s;
-}
-span.home-text:hover {
-	opacity: 0.2;
-	cursor: default;
-}
-#page-banner.index {
-	position: relative;
-	display: block;
-	height: 100%;
-	overflow: visible;
-}
-#page-banner.index img.banner-index { 
+#splash-container img {
 	position: absolute;
-	width: 120%;
-	max-height: 240%;
-	transform: translate(-50%, -50%);
-	top: 60%;
-	left: 50%;
-	opacity: 0.6;
+	left: 0;
+	transform: translateY(-50%);
+	top: 40%;
+	width: 100%;
+	max-height: none;
+	opacity: 0.5;
 	pointer-events: none;
 	z-index: -1;
+	filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(3969%) hue-rotate(326deg) brightness(117%) contrast(119%);
+	transition: filter 0.6s;
+}
+[data-theme="dark"] #splash-container img {
+	filter: brightness(0) saturate(100%) invert(88%) sepia(4%) saturate(1819%) hue-rotate(322deg) brightness(114%) contrast(103%);
+}
+#page-container.splash { /* type container */
+	border: none;
+	padding: 0;
+	height: 800px;
+	width: 100%;
+	cursor: default;
+	text-align: left;
+}
+h1.splash { /* splash title */
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 70pt;
+	display: inline-block;
+	width: 100%;
+	pointer-events: all;
+}
+h1.splash.name {
+	top: 20%;
+	margin-top: 5%;
+	margin-left: 20%;
+}
+h1.splash.design {
+	top: 45%;
+	margin-left: 50%;
+}
+span.splash-char {
+	position: relative;
+	transition: opacity 2s;
+}
+span.splash-char:hover {
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+#footer.splash {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
 
-@media screen and (max-width: 1600px) { 
-	h1.page-title.home {
-		font-size: 70pt;
+/* --- Responsive Splash --- */
+
+
+@media screen and (max-width: 1200px) { 
+	#splash-container img { 
+		width: 1300px;
 	}
-	span.home-text {
-		font-size: 38pt;
+	h1.splash {
+		font-size: 60pt;
+	}
+	h1.splash.name {
+		margin-top: 0;
+		top: 30%;
+		margin-left: 20%;
+	}
+	h1.splash.design {
+		top: 50%;
+		margin-left: 40%;
 	}
 }
-@media screen and (max-width: 1300px) { 
-	h1.page-title.home {
-		font-size: 56pt;
-	}
-	span.home-text {
-		font-size: 32pt;
+
+@media screen and (max-width: 800px) { 
+	h1.splash {
+		font-size: 50pt;
 	}
 }
-@media screen and (max-width: 1100px) { 
-	h1.page-title.home {
+
+@media screen and (max-width: 600px) { 
+	h1.splash {
 		font-size: 40pt;
 	}
-	span.home-text {
-		font-size: 22pt;
+	h1.splash.name {
+		top: 25%;
+		margin-left: 10%;
 	}
-	#page-banner.index img.banner-index { 
-		width: 200%;
-		left: 80%;
-	}
-}
-@media screen and (max-width: 900px) { 
-	.index-content {
-	display: block;
-	width: 100%;
-	max-width: 350px;
-	}
-	h1.page-title.home {
-		padding: 2em 0 0.5em 10px;
+	h1.splash.design {
+		top: 40%;
+		margin-left: 35%;
 	}
 }
-
 
 
 /***********************/
