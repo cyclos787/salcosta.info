@@ -411,6 +411,9 @@ span.lastname {
 	transition: border-color 0.6s;
 	pointer-events: none;
 }
+#light-switch:focus:not(:focus-visible) { /* No outline for click */
+	outline: 0;
+}
 .switch-target { /* Click area */
 	position: absolute;
 	display: block;
@@ -839,7 +842,7 @@ span.top-arrow {
 }
 h1.page-title.home {
 	font-size: 80pt;
-	padding: 2em 0 3em 70px;
+	padding: 1em 0 3em 70px; /* top was 2em*/
 }
 .index-content {
 	display: inline-block;
@@ -847,7 +850,7 @@ h1.page-title.home {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	width: 49%;
+	width: 100%; /* 49 for text */
 }
 span.home-text {
 	margin: 0 auto;
@@ -870,7 +873,7 @@ span.home-text:hover {
 #page-banner.index img.banner-index { 
 	position: absolute;
 	width: 120%;
-	max-height: 200%;
+	max-height: 240%;
 	transform: translate(-50%, -50%);
 	top: 60%;
 	left: 50%;
