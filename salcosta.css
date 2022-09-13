@@ -845,16 +845,14 @@ span.top-arrow {
 	right: 0;
 	lefT: 0;
 	bottom: 0;
-	width: 110%;
-	left: -5%;
+	width: 100%;
 	overflow: hidden;
 	pointer-events: none;
 }
 #splash-container img {
 	position: absolute;
 	left: 0;
-	transform: translateY(-50%);
-	top: 40%;
+	bottom: 0;
 	width: 100%;
 	max-height: none;
 	opacity: 0.5;
@@ -873,16 +871,24 @@ span.top-arrow {
 	width: 100%;
 	cursor: default;
 	text-align: left;
+	margin-left: 15%;
 }
 h1.splash { /* splash title */
 	position: relative;
 	margin: 0;
 	padding: 0;
-	font-size: 70pt;
+	font-size: 60pt;
 	display: inline-block;
-	width: 100%;
 	pointer-events: all;
 }
+h1.splash {
+	top: 40%;
+}
+h1.splash.design {
+	color: #1d1d1d; /* Fallback */
+	color: var(--inverse-base);
+}
+/*
 h1.splash.name {
 	top: 20%;
 	margin-top: 5%;
@@ -892,6 +898,7 @@ h1.splash.design {
 	top: 45%;
 	margin-left: 50%;
 }
+*/
 span.splash-char {
 	position: relative;
 	transition: opacity 2s;
@@ -913,10 +920,15 @@ span.splash-char:hover {
 @media screen and (max-width: 1200px) { 
 	#splash-container img { 
 		width: 1300px;
+		left: auto;
+		right: 0;
 	}
 	h1.splash {
 		font-size: 60pt;
+		width: 100%;
+		top: 35%;
 	}
+	/*
 	h1.splash.name {
 		margin-top: 0;
 		top: 30%;
@@ -926,18 +938,29 @@ span.splash-char:hover {
 		top: 50%;
 		margin-left: 40%;
 	}
+	*/
 }
 
 @media screen and (max-width: 800px) { 
 	h1.splash {
 		font-size: 50pt;
+		top: 30%;
+	}
+	#splash-container img {
+		transform: translateX(-50%);
+		left: 30%;
 	}
 }
 
 @media screen and (max-width: 600px) { 
+	#page-container.splash {
+		margin-left: 10%;
+	}
 	h1.splash {
 		font-size: 40pt;
+		top: 25%;
 	}
+	/*
 	h1.splash.name {
 		top: 15%;
 		margin-left: 10%;
@@ -946,6 +969,7 @@ span.splash-char:hover {
 		top: 25%;
 		margin-left: 35%;
 	}
+	*/
 }
 
 
