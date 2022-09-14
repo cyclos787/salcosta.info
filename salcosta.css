@@ -855,7 +855,7 @@ span.top-arrow {
 	bottom: 0;
 	width: 100%;
 	max-height: none;
-	opacity: 0.5;
+	opacity: 0.7;
 	pointer-events: none;
 	z-index: -1;
 	filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(3969%) hue-rotate(326deg) brightness(117%) contrast(119%);
@@ -888,17 +888,6 @@ h1.splash.design {
 	color: #1d1d1d; /* Fallback */
 	color: var(--inverse-base);
 }
-/*
-h1.splash.name {
-	top: 20%;
-	margin-top: 5%;
-	margin-left: 20%;
-}
-h1.splash.design {
-	top: 45%;
-	margin-left: 50%;
-}
-*/
 span.splash-char {
 	position: relative;
 	transition: opacity 2s;
