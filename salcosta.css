@@ -902,6 +902,13 @@ span.splash-char:hover {
 	right: 0;
 	left: 0;
 }
+#footer.splash span.copyright {
+	border-radius: 1em;
+	background-color: red; /* Fallback */
+	background-color: rgba(var(--active-base-rgb), 0.85);
+	box-shadow: 0 0 5px 5px rgba(var(--active-base-rgb), 0.85);
+	transition: color 0.6s, background-color 0.6s, box-shadow 0.6s;
+}
 
 /* --- Responsive Splash --- */
 
@@ -1576,7 +1583,7 @@ span.dots-break::after { /* break dot content */
 	content: "\2022 \2003 \2003 \2003 \2022 \2003 \2003 \2003 \2022";
 }
 span.copyright { /* Footer Copyright */
-	padding: 2em 0 4em 0;
+	margin: 2em 0 4em 0;
 	font-family: 'Gill Sans MT';
 	display: inline-block;
 	color: #ff6663; /* Fallback */
