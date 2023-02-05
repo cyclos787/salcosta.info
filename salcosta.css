@@ -1513,11 +1513,13 @@ button.collapsible.active h3:after {
 	display: inline-block;
 }
 .youtube-container {
+	display: block;
 	position: relative;
-	width: 50%;
-	display: inline-block;
-	padding-top: 28.12%; /* 16:9 aspect ratio */
-	margin: 1em auto;
+	align-self: center;
+	margin: 0 auto;
+	width: 90%;
+	padding-top: 50.625%; /* 16:9 aspect ratio */
+	border: 1px solid red;
 }
 iframe.youtube {
 	position: absolute;
@@ -1526,6 +1528,50 @@ iframe.youtube {
 	top: 0;
 	left: 0;
 	text-align: center;
+}
+
+.game-module-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow-x: auto;
+	height: 500px;
+	width: 80%;
+	margin: 0 auto;
+	border: 1px solid #ff6663; /* Fallback */
+	border: 1px solid var(--active-accent);
+	border-radius: 16px 16px 0px 0px;
+}
+
+.game-module {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.game-module-content {
+	width: 100%;
+}
+.img-container img.game-pic{
+	height: 360px;
+	border-radius: 16px;
+	margin: 0;
+	width: auto;
+}
+/* game buttons */
+a.button.round.game-left {
+	position: absolute;
+	left: 10%;
+}
+a.button.round.game-right{
+	position: absolute;
+	right: 10%;
+
 }
 
 /**********************************/

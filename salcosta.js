@@ -231,3 +231,25 @@ for (i = 0; i < collapse.length; i++) {
     } 
   });
 }
+
+// ------------------------
+// Game showcase scroll buttons
+
+var gameWidth = 0;
+function gameNext(e) {
+    selectedGame = (e.target).closest(".game-module-container")
+    gameWidth = selectedGame.offsetWidth;
+    selectedGame.scrollBy({
+        left: gameWidth,
+        behavior: 'smooth'
+    });
+}
+
+function gamePrevious(e) {
+    selectedGame = (e.target).closest(".game-module-container")
+    gameWidth = selectedGame.offsetWidth;
+    selectedGame.scrollBy({
+        left: (0 - gameWidth),
+        behavior: 'smooth'
+     });
+}
