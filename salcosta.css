@@ -1536,12 +1536,15 @@ iframe.youtube {
 	justify-content: center;
 	align-items: center;
 	overflow-x: auto;
+	overflow-y: hidden;
 	height: 500px;
 	width: 80%;
 	margin: 0 auto;
 	border: 1px solid #ff6663; /* Fallback */
 	border: 1px solid var(--active-accent);
-	border-radius: 16px 16px 0px 0px;
+	border-radius: 16px 16px 8px 8px;
+	
+	transition: background-color 0.6s;
 }
 
 .game-module {
@@ -1570,7 +1573,27 @@ a.button.round.game-left {
 a.button.round.game-right{
 	position: absolute;
 	right: 10%;
+}
 
+/* scrollbar */
+.game-module-container::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+
+ 
+/* Handle */
+.game-module-container::-webkit-scrollbar-thumb {
+	background-color: #ff6663; /* Fallback */
+	background-color: var(--active-accent);
+  border-radius: 8px;
+	transition: background-color 0.6s;
+}
+
+/* Handle on hover */
+.game-module-container::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8f8d;; 
 }
 
 /**********************************/
@@ -1584,6 +1607,18 @@ a.button.round.game-right{
 		font-size: 12pt;
 	}
 	*/
+	.game-module-container {
+		width: 90%;
+	}
+	a.button.round.game-right {
+		right: 5%;
+	}
+	a.button.round.game-left {
+		left: 5%;
+	}
+	.game-module {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 800px) { /* mobile screens */
 	.img-container.single {
