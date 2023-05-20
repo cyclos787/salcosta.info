@@ -404,7 +404,7 @@ span.lastname {
 	min-width: 18px;
 	display: inline-block;
 	position: relative;
-	/* overflow: hidden; */
+	overflow: hidden;
 	border-radius: 18px;
 	border: 2px solid #ff6663; /* Fallback */
 	border: 2px solid var(--active-accent);
@@ -422,11 +422,7 @@ span.lastname {
 	left: 50%;
 	width: 27px;
 	height: 45px;
-	border-radius: 50px;
-	border: 22px solid #fffbee; /* Fallback */
-	border: 22px solid var(--active-base);
 	pointer-events: all;
-	transition: border-color 0.6s;
 }
 #light-switch:hover .light-symbols, 
 #light-switch:focus .light-symbols {
